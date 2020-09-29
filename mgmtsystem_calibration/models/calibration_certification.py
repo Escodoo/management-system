@@ -10,17 +10,16 @@ class MgmtsystemCalibrationCertification(models.Model):
     _name = 'mgmtsystem_calibration.certification'
     _description = "Certification Control for Equipment Calibrations (Metrology)"
 
-    name = fields.Char('Certification Identification', required=True)
+    name = fields.Char('Certificate Identification', required=True)
 
-    certificationtype_id = fields.Many2one('mgmtsystem_calibration.certificationtype',
+    certification_type_id = fields.Many2one('mgmtsystem_calibration.certificationtype',
                                   string='Certification Type',
                                   required=True)
-
-    equipment = fields.Char('Equipment Model', 
+    model = fields.Char('Equipment Model', 
                                 help="Equipment model")
-
-    serial_number = fields.Char('Serial Number', 
-                                help="Equipment serial number. Must be unique.")
+    serial_no = fields.Char('Serial Number', 
+                                help="Equipment serial number. Must be unique.",
+                                copy=False))
     is_client_equipment = fields.Boolean("Is it a client's equipment?", 
                                 help="Check this box if the equipment belongs to a third party.")
     client_id = fields.Many2one('res.partner',
