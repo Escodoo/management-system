@@ -57,6 +57,11 @@ class MgmtsystemConfigSettings(models.TransientModel):
         help='Provide review tools.\n'
         '- This installs the module mgmtsystem_review.'
     )
+    module_mgmtsystem_calibration = fields.Boolean(
+        'Equipment Calibrations',
+        help='Provide equipment calibration tools.\n'
+        '- This installs the module mgmtsystem_calibration.'
+    )
 
     # Manuals
     module_mgmtsystem_quality_manual = fields.Boolean(
