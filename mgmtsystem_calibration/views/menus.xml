@@ -1,0 +1,23 @@
+<odoo>
+
+  <menuitem name="Calibration"
+            id="menu_calibration_root"
+            parent="mgmtsystem.menu_mgmtsystem_root"
+            groups="group_mgmtsystem_viewer"
+            sequence="90" />
+
+  <menuitem id="menu_open_calibration_certificationtype"
+            name="Certification Types"
+            action="open_mgmtsystem_calibration_certificationtype"
+            parent="mgmtsystem.menu_calibration_root"
+            sequence="10"
+            groups="mgmtsystem.group_mgmtsystem_manager,mgmtsystem.group_mgmtsystem_auditor,base.group_user"/>
+
+  <menuitem id="menu_open_calibration_certification"
+            name="Certification Control"
+            action="open_mgmtsystem_calibration_certification"
+            parent="mgmtsystem.menu_calibration_root"
+            sequence="20"
+            groups="mgmtsystem.group_mgmtsystem_manager,mgmtsystem.group_mgmtsystem_auditor,base.group_user"/>
+
+</odoo>

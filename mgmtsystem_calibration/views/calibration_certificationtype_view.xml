@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_mgmtsystem_calibration.certificationtype_tree" model="ir.ui.view">
+        <field name="name">mgmtsystem_calibration.certificationtype.tree</field>
+        <field name="model">mgmtsystem_calibration.certificationtype</field>
+        <field name="arch" type="xml">
+            <tree string="Certification Types">
+                <field name="name" string="Certification Type"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_mgmtsystem_calibration.certificationtype_form" model="ir.ui.view">
+        <field name="name">mgmtsystem_calibration.certificationtype.form</field>
+        <field name="model">mgmtsystem_calibration.certificationtype</field>
+        <field name="arch" type="xml">
+            <form string="Certification Types">
+                <sheet>
+                    <group name="main">
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+      </field>
+    </record>
+
+    <record id="view_mgmtsystem_calibration.certificationtype_search" model="ir.ui.view">
+        <field name="name">mgmtsystem_calibration.certificationtype.form</field>
+        <field name="model">mgmtsystem_calibration.certificationtype</field>
+        <field name="arch" type="xml">
+            <search string="Search Certification Types">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="open_mgmtsystem_mgmtsystem_calibration.certificationtype" model="ir.actions.act_window">
+        <field name="name">Certification Types</field>
+        <field name="res_model">mgmtsystem_calibration.certificationtype</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
